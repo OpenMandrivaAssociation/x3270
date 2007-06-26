@@ -1,10 +1,10 @@
 %define	tversion	3.3
-%define icumaj		34
+%define icumaj		36
 
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
-Version:	3.3.4p6
-Release:	%mkrel 4
+Version:	3.3.6
+Release:	%mkrel 1
 License:	MIT
 Group:		Terminals
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
@@ -42,18 +42,6 @@ IBM 3278/3279 terminal emulator.
 
 %install
 rm -rf %{buildroot}
-install -d %{buildroot}%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} << EOF
-?package(x3270): \
-needs=X11 \
-section=System/Terminals \
-title="X3270" \
-longtitle="IBM 3270 Terminal Emulator" \
-command="x3270" \
-icon="terminals_section.png" \
-xdg="true"
-EOF
-chmod 0644 %{buildroot}%{_menudir}/%{name}
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop << EOF
@@ -118,7 +106,6 @@ mkfontdir %{_datadir}/fonts/misc
 %{_datadir}/fonts/misc/*
 %{_mandir}/man1/*
 %{_mandir}/man5/*
-%{_menudir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %dir %{_sysconfdir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}/ibm_hosts
