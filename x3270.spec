@@ -81,7 +81,7 @@ dos2unix -U -f html/Build.html
 dos2unix -U -f html/Keymap.html
 sed -i 's|usr/local|usr|g' Examples/peer_script.expect
 sed -i 's|usr/local|usr|g' Examples/cms_logon.bash
-chmod -x %buildroot%{_sysconfdir}/%{name}/icudt*
+chmod -x %buildroot%{_sysconfdir}/%{name}/*
 
 # (sb) old /usr/X11R6/lib/doc/html seems to be gone now - just catch this with %doc
 rm -fr %buildroot%{_prefix}/X11R6/lib/X11/doc
@@ -108,6 +108,5 @@ mkfontdir %{_datadir}/fonts/misc
 %{_mandir}/man5/*
 %{_datadir}/applications/%{name}.desktop
 %dir %{_sysconfdir}/%{name}
-%config(noreplace) %{_sysconfdir}/%{name}/ibm_hosts
-%config(noreplace) %{_sysconfdir}/%{name}/icudt%{icumaj}l*
+%config(noreplace) %{_sysconfdir}/%{name}/*
 %config(noreplace) %{_sysconfdir}/X11/app-defaults/*
