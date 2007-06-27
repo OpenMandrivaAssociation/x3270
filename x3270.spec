@@ -15,6 +15,7 @@ Requires(post):	xorg-x11
 BuildRequires:	imake rman bdftopcf
 BuildRequires:	icu%{icumaj}-devel openssl-devel 
 BuildRequires:	X11-devel dos2unix icu
+BuildRequires:	x11-data-bitmaps
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
