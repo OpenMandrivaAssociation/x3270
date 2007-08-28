@@ -47,7 +47,6 @@ rm -rf %{buildroot}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=X3270
 Comment=IBM 3270 Terminal Emulator
 Exec=%{_bindir}/x3270
