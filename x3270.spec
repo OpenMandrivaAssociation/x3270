@@ -1,10 +1,10 @@
 %define	tversion	3.3
-%define icumaj		36
+%define icumaj		38
 
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
 Version:	3.3.6
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	MIT
 Group:		Terminals
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
@@ -54,7 +54,7 @@ Icon=terminals_section
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=TerminalEmulator;X-MandrivaLinux-System-Terminals;
+Categories=TerminalEmulator;System;
 EOF
 
 # (sb) hack to get around ProjectRoot that insists on 
