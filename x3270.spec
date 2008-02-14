@@ -7,6 +7,7 @@ Version:	3.3.6
 Release:	%mkrel 3
 License:	MIT
 Group:		Terminals
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
 Source:		http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tar.bz2
 
