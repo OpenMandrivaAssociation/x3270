@@ -91,11 +91,15 @@ rm -rf %{buildroot}
 
 %post
 mkfontdir %{_datadir}/fonts/misc
+%if %mdkversion < 200900
 %update_menus
+%endif
 
 %postun
 mkfontdir %{_datadir}/fonts/misc
+%if %mdkversion < 200900
 %clean_menus
+%endif
 
 %files
 %defattr(-,root,root)
