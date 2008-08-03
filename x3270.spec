@@ -4,7 +4,7 @@
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
 Version:	3.3.6
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	MIT
 Group:		Terminals
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
