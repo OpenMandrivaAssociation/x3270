@@ -1,22 +1,27 @@
 %define	tversion	3.3
-%define icumaj		38
 
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
 Version:	3.3.6
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	MIT
 Group:		Terminals
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
-Source:		http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tar.bz2
-
+Source0:	http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tar.bz2
 Requires(pre):	xorg-x11
 Requires(post):	xorg-x11
-BuildRequires:	imake rman bdftopcf
-BuildRequires:	icu%{icumaj}-devel openssl-devel 
-BuildRequires:	X11-devel dos2unix icu
-BuildRequires:	x11-data-bitmaps mkfontdir mkfontscale
+BuildRequires:	 bdftopcf
+BuildRequires:	dos2unix
+BuildRequires:	icu
+BuildRequires:	icu-devel
+BuildRequires:	imake
+BuildRequires:	mkfontdir
+BuildRequires:	mkfontscale
+BuildRequires:	openssl-devel 
+BuildRequires:	rman
+BuildRequires:	x11-data-bitmaps
+BuildRequires:	X11-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The x3270 program opens a window in the X Window System which emulates
