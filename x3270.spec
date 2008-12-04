@@ -2,15 +2,17 @@
 
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
-Version:	3.3.6
-Release:	%mkrel 7
+Version:	3.3.8p1
+Release:	%mkrel 1
 License:	MIT
 Group:		Terminals
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
-Source0:	http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tar.bz2
-Requires(pre):	xorg-x11
-Requires(post):	xorg-x11
-BuildRequires:	 bdftopcf
+Source0:	http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tgz
+
+Requires(post):		mkfontdir
+Requires(postun):	mkfontdir
+
+BuildRequires:	bdftopcf
 BuildRequires:	dos2unix
 BuildRequires:	icu
 BuildRequires:	icu-devel
