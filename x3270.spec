@@ -2,27 +2,28 @@
 
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
-Version:	3.3.8p1
-Release:	%mkrel 2
+Version:	3.3.9ga12
+Release:	%mkrel 1
 License:	MIT
 Group:		Terminals
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
-Source0:	http://prdownloads.sourceforge.net/x3270/x3270-%{version}.tgz
+Source0:	http://downloads.sourceforge.net/project/x3270/x3270/%version/suite3270-%version.tgz
 
 Requires(post):		mkfontdir
 Requires(postun):	mkfontdir
 
 BuildRequires:	bdftopcf
 BuildRequires:	dos2unix
-BuildRequires:	icu
-BuildRequires:	icu-devel
+#BuildRequires:	mkfontdir
+#BuildRequires:	mkfontscale
 BuildRequires:	imake
-BuildRequires:	mkfontdir
-BuildRequires:	mkfontscale
 BuildRequires:	openssl-devel 
-BuildRequires:	rman
-BuildRequires:	x11-data-bitmaps
-BuildRequires:	X11-devel
+#BuildRequires:	rman
+#BuildRequires:	x11-data-bitmaps
+BuildRequires:	libx11-devel
+BuildRequires:	libxaw-devel
+BuildRequires:	libxmu-devel
+BuildRequires:	libxt-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -38,8 +39,7 @@ IBM 3278/3279 terminal emulator.
 %setup -q -n %{name}-%{tversion}
 
 %build
-#export PROJECTROOT=%{_prefix}
-%configure	--enable-ssl \
+%configure2_5x	--enable-ssl \
 		--with-fontdir=%{_datadir}/fonts/misc
 
 %make PROJECTROOT=%{_prefix}
@@ -111,9 +111,7 @@ mkfontdir %{_datadir}/fonts/misc
 %files
 %defattr(-,root,root)
 %doc Examples html
-%{_bindir}/%{name}
-%{_bindir}/pr3287
-%{_bindir}/x3270if
+%{_bindir}/*
 %{_datadir}/fonts/misc/*
 %{_mandir}/man1/*
 %{_mandir}/man5/*
