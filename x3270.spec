@@ -83,9 +83,9 @@ chmod 0755 Examples/*.{sh,bash}
 
 # (sb) make rpmlint happier
 chmod 0644 html/*.html
-dos2unix -U -f html/Brackets.html
-dos2unix -U -f html/Build.html
-dos2unix -U -f html/Keymap.html
+dos2unix -f html/Brackets.html
+dos2unix -f html/Build.html
+dos2unix -f html/Keymap.html
 sed -i 's|usr/local|usr|g' Examples/peer_script.expect
 sed -i 's|usr/local|usr|g' Examples/cms_logon.bash
 chmod -x %buildroot%{_sysconfdir}/%{name}/*
