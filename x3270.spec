@@ -3,7 +3,7 @@
 Summary:	An X Window System based IBM 3278/3279 terminal emulator
 Name:		x3270
 Version:	3.3.9ga12
-Release:	4
+Release:	5
 License:	MIT
 Group:		Terminals
 URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
