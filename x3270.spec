@@ -6,7 +6,7 @@ Version:	3.3.9ga12
 Release:	5
 License:	MIT
 Group:		Terminals
-URL:		http://www.geocities.com/SiliconValley/Peaks/7814/
+URL:		https://www.geocities.com/SiliconValley/Peaks/7814/
 Source0:	http://downloads.sourceforge.net/project/x3270/x3270/%version/suite3270-%version.tgz
 
 Requires(post):		mkfontdir
